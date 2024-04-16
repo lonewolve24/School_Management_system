@@ -1,0 +1,99 @@
+{% extends 'hod_template/base_template.html' %}
+
+{% block page_title %}
+    Manage Class
+{% endblock page_title %}
+
+{% block main_content %}
+
+{% load static %}
+
+<section class="content">
+        <div class="container-fluid">
+
+            <a class="btn btn-primary" href="{% url 'add_class' %}" role="button">+ Add Class</a> <br/>&nbsp;
+
+            {% if messages %}
+                                <div class="form-group">
+                                <div class="col-12">
+                                    {% for message in messages %}
+                                    {% if message.tags == "error" %}
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin-top: 10px;">
+                                        {{ message }}
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                    {% elif message.tags == "success" %}
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-top: 10px;">
+                                        {{ message }}
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                    {% endif %}
+                                    {% endfor %}
+                                </div>
+                                </div>
+                                {% endif %}
+
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Class Details</h3>
+
+                            <div class="card-tools">
+                            <div class="input-group input-group-sm" style="width: 150px;">
+                                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                                <div class="input-group-append">
+                                <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body table-responsive p-0 table-striped table-bordered">
+                            <table class="table table-hover text-nowrap">
+                            <thead>
+                                <tr>
+                                <th>ID</th>
+                                <th>Class Name</th>
+                                <th>Created At</th>
+                                <th>Class Level</th>
+                                <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for single_class in classes %}
+                                <tr>
+                                <td>{{ single_class.id }}</td>
+                                <td>{{ single_class.class_name }}</td>
+                                <td>{{ single_class.created_at }}</td>
+                                <td>{{ single_class.level }}</td>
+                                <td>
+                                    <a href="{% url 'edit_class' single_class.id %}" class="btn btn-success">Edit</a> 
+                                    <a href="{% url 'delete_class' single_class.id %}" class="btn btn-danger">Delete</a>
+                                    {% if single_class.level != 'Nursery' %}
+                                    <!-- The URL name 'manage_subclass' needs to match the name defined in your urls.py for the subclass management view -->
+                                    <a href="{% url 'manage_subclass' single_class.id %}" class="btn btn-info">Manage Subclasses</a>
+                                    {% endif %}
+                                </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                        </div>
+                    <!-- /.card -->
+
+                </div>
+            </div>
+
+        </div><!-- /.container-fluid -->
+      </section>
+
+  {% endblock main_content %}

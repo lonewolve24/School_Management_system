@@ -1,11 +1,12 @@
 
 from django.urls import path, include
 from . import views
-from .import HodViews, StaffViews, StudentViews
+from .import HodViews, StaffViews, StudentViews, WebsiteViews
 
 
 urlpatterns = [
-    path('', views.loginPage, name="login"),
+    path('', WebsiteViews.home, name="home"),
+    path('login/', views.loginPage, name="login"),
     # path('accounts/', include('django.contrib.auth.urls')),
     path('doLogin/', views.doLogin, name="doLogin"),
     path('get_user_details/', views.get_user_details, name="get_user_details"),
@@ -17,12 +18,17 @@ urlpatterns = [
     path('edit_staff/<staff_id>/', HodViews.edit_staff, name="edit_staff"),
     path('edit_staff_save/', HodViews.edit_staff_save, name="edit_staff_save"),
     path('delete_staff/<staff_id>/', HodViews.delete_staff, name="delete_staff"),
-    path('add_course/', HodViews.add_course, name="add_course"),
-    path('add_course_save/', HodViews.add_course_save, name="add_course_save"),
-    path('manage_course/', HodViews.manage_course, name="manage_course"),
-    path('edit_course/<course_id>/', HodViews.edit_course, name="edit_course"),
-    path('edit_course_save/', HodViews.edit_course_save, name="edit_course_save"),
-    path('delete_course/<course_id>/', HodViews.delete_course, name="delete_course"),
+    path('add_class/', HodViews.add_class, name="add_class"),
+    path('add_class_save/', HodViews.add_class_save, name="add_class_save"),
+    path('manage_class/', HodViews.manage_class, name="manage_class"),
+    path('edit_class/<class_id>/', HodViews.edit_class, name="edit_class"),
+    path('edit_class_save/', HodViews.edit_class_save, name="edit_class_save"),
+    path('delete_class/<class_id>/', HodViews.delete_class, name="delete_class"),
+    path('classes/<int:class_id>/subclasses/', HodViews.manage_subclass, name='manage_subclass'),
+    path('subclasses/add/<int:class_id>/', HodViews.add_subclass, name='add_subclass'),
+    path('subclasses/<int:subclass_id>/edit/', HodViews.edit_subclass, name='edit_subclass'),
+    path('get-subclasses/<int:class_id>/', HodViews.get_subclasses, name='get_subclasses'),
+    path('subclasses/<int:subclass_id>/delete/', HodViews.delete_subclass, name='delete_subclass'),
     path('manage_session/', HodViews.manage_session, name="manage_session"),
     path('add_session/', HodViews.add_session, name="add_session"),
     path('add_session_save/', HodViews.add_session_save, name="add_session_save"),
@@ -58,7 +64,9 @@ urlpatterns = [
     path('admin_get_attendance_student/', HodViews.admin_get_attendance_student, name="admin_get_attendance_student"),
     path('admin_profile/', HodViews.admin_profile, name="admin_profile"),
     path('admin_profile_update/', HodViews.admin_profile_update, name="admin_profile_update"),
-    
+    #URLS for for classes management
+    path('get-classes-for-level/', HodViews.get_classes_for_level, name='get-classes-for-level'),
+    path('get-subclasses-for-class/<int:class_id>/', HodViews.get_subclasses_for_class, name='get-subclasses-for-class'),
 
 
     # URLS for Staff
