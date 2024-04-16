@@ -1,0 +1,7 @@
+migrations/*
+student_management_app/migrations/*
+.venv
+.env
+static/*
+media/*
+__pycache__
