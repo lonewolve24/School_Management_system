@@ -14,6 +14,8 @@ SECRET_KEY = '(i#*06f#keydy_fh17bf=$0f6v)^wr^l7*u4gq42m*sztu#2_m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CSRF_TRUSTED_ORIGINS = ['https://schoolmanagementsystem-production-481b.up.railway.app']
+
 ALLOWED_HOSTS = ['schoolmanagementsystem-production-481b.up.railway.app',]
 
 
