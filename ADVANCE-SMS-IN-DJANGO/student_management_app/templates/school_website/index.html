@@ -1,61 +1,57 @@
-{% extends  'school_website/base_template.html' %}
-{% load static %}
-
+{% extends 'school_website/base_template.html' %}
+{%load static %}
 {% block content %}
-	<aside id="fh5co-hero">
-		<div class="flexslider">
-			<ul class="slides">
-                <li style="background-image: url('{%  static 'custom_style/images/Nusery_event.jpeg' %}');">
-		   		<div class="overlay-gradient"></div>
-		   		<div class="container">
-		   			<div class="row">
-			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
-			   				<div class="slider-text-inner">
-			   					<h1>The Roots of Education are Bitter, But the Fruit is Sweet</h1>
-									<h2>Brought to you by</a></h2>
-									<p><a class="btn btn-primary btn-lg" href="#">Start Learning Now!</a></p>
-			   				</div>
-			   			</div>
-			   		</div>
-		   		</div>
-		   	</li>
-		   	<li style="background-image: url('{% static 'custom_style/images/Junior_cover.jpeg' %}');">
-		   		<div class="overlay-gradient"></div>
-		   		<div class="container">
-		   			<div class="row">
-			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
-			   				<div class="slider-text-inner">
-			   					<h1>The Great Aim of Education is not Knowledge, But Action</h1>
-									<h2>Brought to you by</h2>
-									<p><a class="btn btn-primary btn-lg btn-learn" href="#">Start Learning Now!</a></p>
-			   				</div>
-			   			</div>
-			   		</div>
-		   		</div>
-		   	</li>
-		   	<li style="background-image: url('{% static 'custom_style/images/Primary_cover.jpeg' %}');">
-		   		<div class="overlay-gradient"></div>
-		   		<div class="container">
-		   			<div class="row">
-			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
-			   				<div class="slider-text-inner">
-			   					<h1>We Help You to Learn New Things</h1>
-									<h2>Brought to you by</h2>
-									<p><a class="btn btn-primary btn-lg btn-learn" href="#">Start Learning Now!</a></p>
-			   				</div>
-			   			</div>
-			   		</div>
-		   		</div>
-		   	</li>		   	
-		  	</ul>
-	  	</div>
-	</aside>
+<aside id="fh5co-hero">
+	<div class="flexslider">
+		<ul class="slides">
+			<li style="background-image: url('{% static "assets/images/Nusery_event.jpeg" %}');">
+				<div class="overlay-gradient"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center slider-text">
+							<div class="slider-text-inner">
+								<h1>The Roots of Education are Bitter, But the Fruit is Sweet</h1>
+								<p><a class="btn btn-primary btn-lg" href="#">Start Learning Now!</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="background-image: url('{% static "assets/images/Junior_cover.jpeg" %}');">
+				<div class="overlay-gradient"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center slider-text">
+							<div class="slider-text-inner">
+								<h1>The Great Aim of Education is not Knowledge, But Action</h1>
+								<p><a class="btn btn-2primary btn-lg btn-learn" href="#">Start Learning Now!</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="background-image: url('{% static "assets/images/Primary_cover.jpeg" %}');">
+				<div class="overlay-gradient"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center slider-text">
+							<div class="slider-text-inner">
+								<h1>We Help You to Learn New Things</h1>
+								<p><a class="btn btn-primary btn-lg btn-learn" href="#">Start Learning Now!</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>                   
+		</ul>
+	</div>
+</aside>
 
-	<div id="fh5co-blog">
+	<div id="fh5co-course-categories">
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2>School Subjects</h2>
+					<h2>Course categories</h2>
 					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
 				</div>
 			</div>
@@ -66,7 +62,7 @@
 							<i class="icon-shop"></i>
 						</span>
 						<div class="desc">
-							<h3><a href="#">English Language</a></h3>
+							<h3><a href="#">English</a></h3>
 							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
 						</div>
 					</div>
@@ -88,7 +84,7 @@
 							<i class="icon-banknote"></i>
 						</span>
 						<div class="desc">
-							<h3><a href="#">Created &amp; Development</a></h3>
+							<h3><a href="#">Created Development</a></h3>
 							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
 						</div>
 					</div>
@@ -99,15 +95,17 @@
 							<i class="icon-lab2"></i>
 						</span>
 						<div class="desc">
-							<h3><a href="#">Science &amp; Technology</a></h3>
+							<h3><a href="#">General Science</a></h3>
 							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
 						</div>
 					</div>
 				</div>
+			</div>
 		</div>
 	</div>
 
-	<div id="fh5co-counter" class="fh5co-counters" style="background-image: url(images/img_bg_4.jpg);" data-stellar-background-ratio="0.5">
+	<div id="fh5co-counter" class="fh5co-counters" style="background-image: url('{% static "assets/images/img_bg_4.jpg" %}');" data-stellar-background-ratio="0.5">
+        <!-- Your counters section HTML -->
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -115,7 +113,7 @@
 					<div class="row">
 						<div class="col-md-3 col-sm-6 text-center animate-box">
 							<span class="icon"><i class="icon-world"></i></span>
-							<span class="fh5co-counter js-counter" data-from="0" data-to="20" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter js-counter" data-from="0" data-to="35" data-speed="5000" data-refresh-interval="50"></span>
 							<span class="fh5co-counter-label">Staffs</span>
 						</div>
 						<div class="col-md-3 col-sm-6 text-center animate-box">
@@ -125,8 +123,8 @@
 						</div>
 						<div class="col-md-3 col-sm-6 text-center animate-box">
 							<span class="icon"><i class="icon-bulb"></i></span>
-							<span class="fh5co-counter js-counter" data-from="0" data-to="20" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="fh5co-counter-label">Class Rooms</span>
+							<span class="fh5co-counter js-counter" data-from="0" data-to="25" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label">Classes Rooms</span>
 						</div>
 						<div class="col-md-3 col-sm-6 text-center animate-box">
 							<span class="icon"><i class="icon-head"></i></span>
@@ -138,17 +136,18 @@
 			</div>
 		</div>
 	</div>
+
 	<div id="fh5co-blog">
 		<div class="container">
 			<div class="row animate-box">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2><span> School Level</span></h2>
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>School Level</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-img-holder" style="background-image: url('{% static 'custom_style/images/Nusery.jpg' %}');"></a>
+						<a href="#" class="blog-img-holder" style="background-image: url('{% static "assets/images/Nusery.jpg" %}');"></a>
 						<div class="blog-text">
 							<h3><a href="#">Nusery School</a></h3>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -157,18 +156,18 @@
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-img-holder" style="background-image: url('{% static 'custom_style/images/Primary_b.jpeg' %}');"></a>
+						<a href="#" class="blog-img-holder" style="background-image: url('{% static "assets/images/Primary_b.jpeg" %}');"></a>
 						<div class="blog-text">
-							<h3><a href="#">Primary School</a></h3>
+							<h3><a href="#"> Primary School</a></h3>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 						</div> 
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-img-holder" style="background-image: url('{% static 'custom_style/images/Junior_b.jpeg' %}');"></a>
+						<a href="#" class="blog-img-holder" style="background-image: url('{% static "assets/images/Junior_b.jpeg" %}');"></a>
 						<div class="blog-text">
-							<h3><a href="#">Junior Secondary School</a></h3>
+							<h3><a href="#"> Junior School</a></h3>
 							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 						</div> 
 					</div>
@@ -176,9 +175,9 @@
 			</div>
 		</div>
 	</div>
-	
-	
-    <div id="fh5co-testimonial" style="background-image: url(images/school.jpg);">
+
+	<div id="fh5co-testimonial" style="background-image: url('{% static "assets/images/school.jpg" %}');">
+        <!-- Your testimonials section HTML -->
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
@@ -192,7 +191,7 @@
 						<div class="owl-carousel owl-carousel-fullwidth">
 							<div class="item">
 								<div class="testimony-slide active text-center">
-									<div class="user" style="background-image: url(images/person1.jpg);"></div>
+									<div class="user" style="background-image: url('{% static "assets/images/person1.jpg" %}');"></div>
 									<span>Mary Walker<br><small>Students</small></span>
 									<blockquote>
 										<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
@@ -201,7 +200,7 @@
 							</div>
 							<div class="item">
 								<div class="testimony-slide active text-center">
-									<div class="user" style="background-image: url(images/person2.jpg);"></div>
+									<div class="user" style="background-image: url('{% static "assets/images/person2.jpg" %}');"></div>
 									<span>Mike Smith<br><small>Students</small></span>
 									<blockquote>
 										<p>&ldquo;Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
@@ -210,7 +209,7 @@
 							</div>
 							<div class="item">
 								<div class="testimony-slide active text-center">
-									<div class="user" style="background-image: url(images/person3.jpg);"></div>
+									<div class="user" style="background-image: url('{% static "assets/images/person3.jpg" %}');"></div>
 									<span>Rita Jones<br><small>Teacher</small></span>
 									<blockquote>
 										<p>&ldquo;Far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
@@ -232,10 +231,36 @@
 					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
 				</div>
 			</div>
+			<div class="row row-padded-mb">
+				<div class="col-md-4 animate-box">
+					<div class="fh5co-event">
+						<div class="date text-center"><span>15<br>Mar.</span></div>
+						<h3><a href="#">USA, International Triathlon Event</a></h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<p><a href="#">Read More</a></p>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="fh5co-event">
+						<div class="date text-center"><span>15<br>Mar.</span></div>
+						<h3><a href="#">USA, International Triathlon Event</a></h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<p><a href="#">Read More</a></p>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="fh5co-event">
+						<div class="date text-center"><span>15<br>Mar.</span></div>
+						<h3><a href="#">New Device Develope by Microsoft</a></h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<p><a href="#">Read More</a></p>
+					</div>
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-lg-4 col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-img-holder" style="background-image: url(images/project-1.jpg);"></a>
+						<a href="#" class="blog-img-holder" style="background-image: url('{% static "assets/images/project-1.jpg" %}');"></a>
 						<div class="blog-text">
 							<h3><a href="#">Healty Lifestyle &amp; Living</a></h3>
 							<span class="posted_on">March. 15th</span>
@@ -246,7 +271,7 @@
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-img-holder" style="background-image: url(images/project-2.jpg);"></a>
+						<a href="#" class="blog-img-holder" style="background-image: url('{% static "assets/images/project-2.jpg" %}');"></a>
 						<div class="blog-text">
 							<h3><a href="#">Healty Lifestyle &amp; Living</a></h3>
 							<span class="posted_on">March. 15th</span>
@@ -257,7 +282,7 @@
 				</div>
 				<div class="col-lg-4 col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-img-holder" style="background-image: url(images/project-3.jpg);"></a>
+						<a href="#" class="blog-img-holder" style="background-image: url('{% static "assets/images/project-3.jpg" %}');"></a>
 						<div class="blog-text">
 							<h3><a href="#">Healty Lifestyle &amp; Living</a></h3>
 							<span class="posted_on">March. 15th</span>
@@ -274,8 +299,7 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2>Tution&amp; Fee</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					<h2>School Tution Fee</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -310,7 +334,7 @@
 						<div class="pricing__item">
 							<div class="wrap-price">
 								<!-- <div class="icon icon-store"></div> -->
-	                     <h3 class="pricing__title">Primary School </h3>
+	                     <h3 class="pricing__title">Primary School</h3>
 	                     <!-- <p class="pricing__sentence">Up to 5 users</p> -->
 							</div>
                      <div class="pricing__price">
@@ -336,7 +360,7 @@
                   <div class="pricing__item">
                   	<div class="wrap-price">
                   		<!-- <div class="icon icon-home2"></div> -->
-	                     <h3 class="pricing__title">Junior School </h3>
+	                     <h3 class="pricing__title">Junior School</h3>
 	                     <!-- <p class="pricing__sentence">Unlimited users</p> -->
 							</div>
                      <div class="pricing__price">
@@ -363,25 +387,26 @@
 		</div>
 	</div>
 
+
 	<div id="fh5co-gallery" class="fh5co-bg-section">
 		<div class="row text-center">
-			<h2><span>Gallery</span></h2>
+			<h2><span>Instagram Gallery</span></h2>
 		</div>
 		<div class="row">
 			<div class="col-md-3 col-padded">
-				<a href="#" class="gallery" style="background-image: url('{%  static 'custom_style/images/Nusery.jpeg' %}');"></a>
+				<a href="#" class="gallery" style="background-image: url('{% static "assets/images/school1.jpeg" %}');"></a>
 			</div>
 			<div class="col-md-3 col-padded">
-				<a href="#" class="gallery" style="background-image: url('{%  static 'custom_style/images/Junior_b.jpeg' %}');"></a>
+				<a href="#" class="gallery" style="background-image: url('{% static "assets/images/school2.jpeg" %}');"></a>
 			</div>
 			<div class="col-md-3 col-padded">
-				<a href="#" class="gallery" style="background-image: url('{%  static 'custom_style/images/Primary_cover.jpeg' %}');"></a>
+				<a href="#" class="gallery" style="background-image: url('{% static "assets/images/school3.jpeg" %}');"></a>
 			</div>
 			<div class="col-md-3 col-padded">
-				<a href="#" class="gallery" style="background-image: url('{%  static 'custom_style/images/Nusery_cover.jpeg' %}');"></a>
+				<a href="#" class="gallery" style="background-image: url('{% static "assets/images/school4.jpeg" %}');"></a>
 			</div>
 		</div>
+		
 	</div>
-{% endblock %}
 
-
+{% endblock%}

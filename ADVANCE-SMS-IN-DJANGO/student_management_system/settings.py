@@ -16,7 +16,7 @@ DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = ['https://schoolmanagementsystem-production-481b.up.railway.app']
 
-ALLOWED_HOSTS = ['schoolmanagementsystem-production-481b.up.railway.app',]
+ALLOWED_HOSTS = ['schoolmanagementsystem-production-481b.up.railway.app', '127.0.0.1',]
 
 
 # Application definition

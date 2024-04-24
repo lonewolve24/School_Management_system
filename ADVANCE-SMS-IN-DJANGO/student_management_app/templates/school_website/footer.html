@@ -1,4 +1,5 @@
-<footer id="fh5co-footer" role="contentinfo" style="background-image: url(images/img_bg_4.jpg);">
+{% load static %}
+<footer id="fh5co-footer" role="contentinfo" style="background-image: url('{% static "assets/images/img_bg_4.jpg" %}');">
     <div class="overlay"></div>
     <div class="container">
         <div class="row row-pb-md">
@@ -53,8 +54,7 @@
         <div class="row copyright">
             <div class="col-md-12 text-center">
                 <p>
-                    <small class="block">&copy; . All Rights Reserved.</small> 
-                    <small class="block">Designed by <a href="https://www.linkedin.com/in/abdul-muizz-ikumapayi/" target="_blank">Abdul Muizz</a></small>
+                    <small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
                 </p>
             </div>
         </div>
@@ -62,26 +62,6 @@
     </div>
 </footer>
 </div>
-
 <div class="gototop js-top">
     <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 </div>
-
-<script>
-var d = new Date(new Date().getTime() + 1000 * 120 * 120 * 2000);
-
-// default example
-simplyCountdown('.simply-countdown-one', {
-    year: d.getFullYear(),
-    month: d.getMonth() + 1,
-    day: d.getDate()
-});
-
-//jQuery example
-$('#simply-countdown-losange').simplyCountdown({
-    year: d.getFullYear(),
-    month: d.getMonth() + 1,
-    day: d.getDate(),
-    enableUtc: false
-});
-</script>
