@@ -13,7 +13,8 @@ class LoginCheckMiddleWare(MiddlewareMixin):
         public_paths = [
             reverse("login"), 
             reverse("doLogin"),
-            reverse("home"),  # Assuming you have a URL name 'home' for your homepage
+            reverse("home"),
+            reverse("about"),  # Assuming you have a URL name 'home' for your homepage
             # Add any other paths that should be public here
         ]
 
